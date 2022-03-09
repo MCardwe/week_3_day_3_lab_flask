@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>{{ title }} - M&D Magic</title>
+    </head>
+    <body>
+        <h1>Online Orders</h1>
+        {% for order in orders %}
+            <div>
+                {{ order.date }}: {{ order.trick_name }}, <b> {{ order.quantity }} </b>, {{ order.price }}, {{ order.name }} <a href="/orders/{{ orders.index(order) }}">More Info</a>
+            </div>
+        {% endfor %}
+    </body>
+</html>
